@@ -28,9 +28,17 @@ Lets go over all of the components that we'll need to make reach this objective
 
 ### Prerequisites
 
-If you're on MacOs, ensure your operating system is up to date, and that you are using an admin account.
+Golden Rule: if you get stuck, ask [ChatGpt](https://chatgpt.com/)! It can give you step by step instructions on how to do any of the things in the setup.
 
-If you're on Windows, you'll need to [install the Windows Subsystem for Linux.](https://learn.microsoft.com/en-us/windows/wsl/install)
+**MacOs**
+- ensure your operating system is up to date, and that you are using an admin account. 
+- Install `brew` on your terminal 
+
+**Windows**
+
+- install the [Windows Subsystem for Linux.](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+**Both**
 
 Download and [install Visual Studio Code](https://code.visualstudio.com/download), we'll use this to edit code. 
 
@@ -97,4 +105,92 @@ cd <repository-name>
 ```
 
 You can now open this folder in Visual Studio Code by using the command: `code .` or by opening the application, selecting "open folder", and navigating to the folder. 
+
+### Your first Typescript / NodeJs Application
+
+This will be code that we'll use to create the logic that will remind us to bring an umbrella on a rainy day. 
+
+As mentioned earlier, we'll be writing this in Typescript and NodeJs. If you don't know typescript, don't worry, we don't expect you to. If you're familiar with other programming languages like Javascript, java, and C++ you'll understand the code just fine.  
+
+Lets start by installing the tools we need. We'll need:
+
+- **nvm**
+- **npm**
+- **typescript**
+
+Install `nvm` on your terminal by running the following command, we'll use this to install some related libraries. You may need to restart your terminal to use `nvm`
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
+
+To download, compile, and install the latest release of `node`, do this:
+```
+nvm install node
+```
+
+Now lets install our programming language 
+```
+npm install -g typescript
+```
+
+Verify that TypeScript is installed by running the following:
+```
+tsc -v
+```
+
+Great! We have the tools we need to start writing our project!
+
+The following commands should be run on your command line in your project folder. Your command line should look something like: `username@username:~/remember-your-umbrella$`
+
+Initialize a new `Node.js` project. This will create the `package.json`, the file the defines the settings for our application, we'll use the defaults. 
+```
+npm init -y
+```
+
+Create a `tsconfig.json` file in the root of your project:
+
+```
+npx tsc --init
+```
+
+This file will define the settings for `typescript`, we'll use the defaults.
+
+Now that we're done with the setup, now is a good time to save our changes by using git.
+
+### Making changes as a software engineer
+Making changes, adding them to a `branch`, creating a `pull request` and `merging` your changes are a daily task as a software engineer, so this is a great practice and definitely worth mentioning that you have experience with in an interview. 
+
+First lets create a branch. (if you're new to git, read up [here](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/))
+```
+git branch settings
+```
+Then move onto the branch
+```
+git checkout settings
+```
+Now lets view the changes we have thus far
+```
+git status
+```
+You should see all of the new files you've added listed. Lets `stage` them to be `commited`
+```
+git add -A
+```
+now `commit` your changes and push them. Add a helpful message explaining the changes.
+
+```
+git commit -m "<your message here>"
+git push --set-upstream origin settings
+```
+
+Time to create a pull request. Navigate to:
+```
+https://github.com/<your-github-username>/<your-repository-name>/pulls
+```
+
+![alt text](image-1.png)
+
+
+Select the branch you just created from the dropdown and git `Create Pull Request`. Add a title and description of the changes. 
+Let's start by creating a basic `express` application. `express` is a library for making network requests. 
 
