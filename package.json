@@ -1,0 +1,29 @@
+{
+  "name": "bring-your-umbrella",
+  "version": "1.0.0",
+  "description": "Welcome to Arab Tech Collective! We're here to propel your career in tech and the first step is a good resume. A unique project that demonstrates your technical acumen is a must have in the interview room. Everyone will take classes and do class projects, but only you will have completed a project built by Google, Amazon, and Meta Engineers!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomaa-daniel/bring-your-umbrella.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomaa-daniel/bring-your-umbrella/issues"
+  },
+  "homepage": "https://github.com/jomaa-daniel/bring-your-umbrella#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
