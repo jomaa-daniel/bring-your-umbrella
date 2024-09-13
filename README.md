@@ -187,10 +187,36 @@ Time to create a pull request. Navigate to:
 ```
 https://github.com/<your-github-username>/<your-repository-name>/pulls
 ```
+*if you get a permission error when pushing to github, run the following commands and try again: `eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/github`*
 
 ![alt text](image-1.png)
 
+Select the branch you just created from the dropdown and git `Create Pull Request`. Add a title and description of the changes.
 
-Select the branch you just created from the dropdown and git `Create Pull Request`. Add a title and description of the changes. 
+![alt text](image-2.png)
+
+Now hit merge
+
+![alt text](image-3.png)
+
+Congrats! You are now a software engineer!
+
+### Creating an Express Application
+
+At this point your repository should contain the following necessary files:
+
+- `tsconfig.json`
+- `package.json`
+- `package-lock.json`
+
+Let's start by building out our folder structure. Most `NodeJs` projects revolve around the `src/` directory. So lets create that:
+```
+mkdir src
+```
+Then lets create the entrypoint for our code, this is typically named `index`
+```
+touch src/index.ts
+```
+
 Let's start by creating a basic `express` application. `express` is a library for making network requests. 
 
