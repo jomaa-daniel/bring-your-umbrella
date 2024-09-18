@@ -189,7 +189,7 @@ https://github.com/<your-github-username>/<your-repository-name>/pulls
 ```
 
 ![alt text](image-1.png)
-
+![alt text](image-2.png)
 
 Select the branch you just created from the dropdown and git `Create Pull Request`. Add a title and description of the changes. 
 Let's start by creating a basic `express` application. `express` is a library for making network requests. 

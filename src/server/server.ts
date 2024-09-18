@@ -1,9 +1,11 @@
 import express, { Application } from "express";
 import cors, { CorsOptions } from "cors";
+import { MainController } from "../controller/controller";
 
 export default class Server {
     constructor(app: Application) {
         this.config(app);
+        new MainController(app);
     }
 
     private config(app: Application): void {
