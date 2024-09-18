@@ -123,10 +123,14 @@ Install `nvm` on your terminal by running the following command, we'll use this 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
 
+Now close your terminal and open it again
+
 To download, compile, and install the latest release of `node`, do this:
 ```
 nvm install node
 ```
+
+To verify you've installed `nvm` and `node` correctly run `nvm -help` and `node -help`, you should not get a `command not found error`
 
 Now lets install our programming language 
 ```
@@ -209,7 +213,23 @@ At this point your repository should contain the following necessary files:
 - `package.json`
 - `package-lock.json`
 
-Let's start by building out our folder structure. Most `NodeJs` projects revolve around the `src/` directory. So lets create that:
+
+`express` is a web application library. It will allow our server to communicate easily over the internet. Learn more about it [here](https://expressjs.com/)
+
+#### Installation
+
+```
+npm install express --save 
+npm install --save-dev typescript @types/node @types/express ts-node nodemon
+```
+
+If you open your `package.json` (remember you can open vscode in your local directory)
+
+Let's start by building out our folder structure. Make sure you are in the git repository folder you have just created. You can do this by running 
+```
+pwd
+```
+and verifying your folder path is in the correct place. Most `NodeJs` projects revolve around the `src/` directory. This is short for "source" and is where we traditionally place our code. So lets create that:
 ```
 mkdir src
 ```
@@ -218,5 +238,7 @@ Then lets create the entrypoint for our code, this is typically named `index`
 touch src/index.ts
 ```
 
-Let's start by creating a basic `express` application. `express` is a library for making network requests. 
+
+
+
 
